@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>dynamics_sim.results</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="dynamics_sim-module.html">Package&nbsp;dynamics_sim</a> ::
+        Module&nbsp;results
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="dynamics_sim.results-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="dynamics_sim.results-module.html">Module dynamics_sim.results</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-docstring">'elubin'</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module dynamics_sim.plot=dynamics_sim.plot-module.html"><a title="dynamics_sim.plot" class="py-name" href="#" onclick="return doclink('link-0', 'plot', 'link-0');">plot</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class dynamics_sim.plot.GraphOptions=dynamics_sim.plot.GraphOptions-class.html"><a title="dynamics_sim.plot.GraphOptions" class="py-name" href="#" onclick="return doclink('link-1', 'GraphOptions', 'link-1');">GraphOptions</a></tt><tt class="py-op">,</tt> <tt id="link-2" class="py-name" targets="Function dynamics_sim.plot.plot_single_data_set()=dynamics_sim.plot-module.html#plot_single_data_set"><a title="dynamics_sim.plot.plot_single_data_set" class="py-name" href="#" onclick="return doclink('link-2', 'plot_single_data_set', 'link-2');">plot_single_data_set</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Function dynamics_sim.plot.plot_3d_data_set()=dynamics_sim.plot-module.html#plot_3d_data_set"><a title="dynamics_sim.plot.plot_3d_data_set" class="py-name" href="#" onclick="return doclink('link-3', 'plot_3d_data_set', 'link-3');">plot_3d_data_set</a></tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">numpy</tt> </tt>
+<a name="NDimensionalData"></a><div id="NDimensionalData-def"><a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"># TODO: architecture to persist results of a single simulation across many runs</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment"># class SingleSimulationOutcome(object):</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#     def __init__(self, dyn_class, dyn_init_kwargs, game_class, game_kwargs, results):</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment">#         pass</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment">#     def last_generation(self):</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment">#         pass</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-comment">#     # redo the simulation and get more results</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment">#     def redo(self):</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment">#         pass</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-comment">#     def save(self):</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment">#         return "PATH_TO_FILE"</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment"># # a class that handles simulation results</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-comment"># # all simulations must be from the same dynamics, with the</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-comment"># class VariedParameterSimulation(object):</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-comment">#     def __init__(self, game):</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-comment">#         self. game = game # the game being played (a pointer to the class)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-comment">#         # list of lists, N deep</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-comment">#         # list of independent parameters, of length N, detailing on which level each parameter that is varied, and its range</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-comment">#         # keep each simulation result as an element in an array</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-comment">#         # each array is a part of the dictionary that is keyed by a tuple of tuples defining the parameters for a given</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-comment">#         # fixed simulation. Those parameters are sorted alphabetically to ensure consistency in keys</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-comment">#     @classmethod</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-comment">#     def load_from_file(cls, path_to_file):</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-comment">#         pass</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-comment">#     def persist(self):</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-comment">#         return "PATH_TO_FILE"</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-comment">#     # redo the simulation(s), and</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-comment">#     def redo(self):</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-comment">#         pass</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt> <a class="py-toggle" href="#" id="NDimensionalData-toggle" onclick="return toggle('NDimensionalData');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="dynamics_sim.results.NDimensionalData-class.html">NDimensionalData</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NDimensionalData-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="NDimensionalData-expanded"><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-docstring">    A helper class that encapsulates varied multi-dimensional results. The results are stored as a recursive</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-docstring">    list of lists, whereby to get the simulation results for a given fixed set of parameters, we can iterate through</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-docstring">    the recursive list and index based on the indices of the independent parameter values desired.</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="NDimensionalData.__init__"></a><div id="NDimensionalData.__init__-def"><a name="L56"></a><tt class="py-lineno"> 56</tt> <a class="py-toggle" href="#" id="NDimensionalData.__init__-toggle" onclick="return toggle('NDimensionalData.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.results.NDimensionalData-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">data</tt><tt class="py-op">,</tt> <tt class="py-param">independent_parameters</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NDimensionalData.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NDimensionalData.__init__-expanded"><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">        Initialize the multi-dimensional data container with the given data.</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring">        @param data: A recursive list of lists representing the data in a tree-like form, where the address to the data</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring">            corresponds to the index of the parameter's value that the data takes, in order of the parameters in the list</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">        @type data: list(...), of length exactly len(independent_parameters)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">        @param independent_parameters: a list of the IndependentParameter instances</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">        @type independent_parameters: list(L{VerboseIndependentParameter})</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">independent_parameters</tt> <tt class="py-op">=</tt> <tt class="py-name">independent_parameters</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-name">data</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method dynamics_sim.results.NDimensionalData._validate_data()=dynamics_sim.results.NDimensionalData-class.html#_validate_data"><a title="dynamics_sim.results.NDimensionalData._validate_data" class="py-name" href="#" onclick="return doclink('link-4', '_validate_data', 'link-4');">_validate_data</a></tt><tt class="py-op">(</tt><tt class="py-name">data</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="NDimensionalData._validate_data"></a><div id="NDimensionalData._validate_data-def"><a name="L70"></a><tt class="py-lineno"> 70</tt> <a class="py-toggle" href="#" id="NDimensionalData._validate_data-toggle" onclick="return toggle('NDimensionalData._validate_data');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.results.NDimensionalData-class.html#_validate_data">_validate_data</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">data</tt><tt class="py-op">,</tt> <tt class="py-param">idx</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NDimensionalData._validate_data-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NDimensionalData._validate_data-expanded"><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">idx</tt> <tt class="py-op">==</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">independent_parameters</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">data</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">independent_parameters</tt><tt class="py-op">[</tt><tt class="py-name">idx</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">x</tt> <tt class="py-keyword">in</tt> <tt class="py-name">data</tt><tt class="py-op">:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="dynamics_sim.results.NDimensionalData._validate_data" class="py-name" href="#" onclick="return doclink('link-5', '_validate_data', 'link-4');">_validate_data</a></tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">idx</tt> <tt class="py-op">+</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
+<a name="NDimensionalData.num_dimensions"></a><div id="NDimensionalData.num_dimensions-def"><a name="L79"></a><tt class="py-lineno"> 79</tt> <a class="py-toggle" href="#" id="NDimensionalData.num_dimensions-toggle" onclick="return toggle('NDimensionalData.num_dimensions');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.results.NDimensionalData-class.html#num_dimensions">num_dimensions</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NDimensionalData.num_dimensions-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NDimensionalData.num_dimensions-expanded"><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">        Get the number of dimensions that this data represents (one more than the number of independent variables)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">independent_parameters</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-number">1</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="NDimensionalData.graph"></a><div id="NDimensionalData.graph-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="NDimensionalData.graph-toggle" onclick="return toggle('NDimensionalData.graph');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.results.NDimensionalData-class.html#graph">graph</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">equilibria</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NDimensionalData.graph-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NDimensionalData.graph-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">        Graph the data, if possible. Subclasses may override this method.</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">        @param equilibria: the list of available equlibria, as strings</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">        @type equilibria: list</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">ValueError</tt><tt class="py-op">(</tt><tt class="py-string">"Cannot graph %d dimensions, marginalize the data and try again"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="NDimensionalData.marginalize"></a><div id="NDimensionalData.marginalize-def"><a name="L94"></a><tt class="py-lineno"> 94</tt> <a class="py-toggle" href="#" id="NDimensionalData.marginalize-toggle" onclick="return toggle('NDimensionalData.marginalize');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.results.NDimensionalData-class.html#marginalize">marginalize</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NDimensionalData.marginalize-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NDimensionalData.marginalize-expanded"><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">        Convert the N dimensional data to a lower-order dimension by iterating through the data and stitching</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">        together the appropriate subarrays. The keyword arguments are keyed by the keyword of the parameter, and their</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">        value is the value on which to marginalize the data (by fixing that parameter to that value, and therefore</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">        looking at one cross section of the higher order data</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">        @return: A new instance of NDimensionData or any of its subclasses</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: NDimensionalData</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-comment"># TODO: still needs to be implemented</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">classmethod</tt> </tt>
+<a name="NDimensionalData.initialize"></a><div id="NDimensionalData.initialize-def"><a name="L107"></a><tt class="py-lineno">107</tt> <a class="py-toggle" href="#" id="NDimensionalData.initialize-toggle" onclick="return toggle('NDimensionalData.initialize');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.results.NDimensionalData-class.html#initialize">initialize</a><tt class="py-op">(</tt><tt class="py-param">cls</tt><tt class="py-op">,</tt> <tt class="py-param">data</tt><tt class="py-op">,</tt> <tt class="py-param">independent_parameters</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NDimensionalData.initialize-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NDimensionalData.initialize-expanded"><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">        A helper class method that initializes the class (or subclass) of L{NDimensionalData} with the given keyword</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">        arguments. It first checks the number of parameters to vary, and then chooses the appropriate class accordingly.</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-docstring">        @param data:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-docstring">        @type data:</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring">        @param independent_parameters:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">        @type independent_parameters:</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-name">n</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">independent_parameters</tt><tt class="py-op">)</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-name">constructor</tt> <tt class="py-op">=</tt> <tt class="py-name">cls</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">n</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">            <tt class="py-name">constructor</tt> <tt class="py-op">=</tt> <tt id="link-6" class="py-name" targets="Class dynamics_sim.results.TwoDimensionalData=dynamics_sim.results.TwoDimensionalData-class.html"><a title="dynamics_sim.results.TwoDimensionalData" class="py-name" href="#" onclick="return doclink('link-6', 'TwoDimensionalData', 'link-6');">TwoDimensionalData</a></tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">n</tt> <tt class="py-op">==</tt> <tt class="py-number">2</tt><tt class="py-op">:</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-name">constructor</tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name" targets="Class dynamics_sim.results.ThreeDimensionalData=dynamics_sim.results.ThreeDimensionalData-class.html"><a title="dynamics_sim.results.ThreeDimensionalData" class="py-name" href="#" onclick="return doclink('link-7', 'ThreeDimensionalData', 'link-7');">ThreeDimensionalData</a></tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">constructor</tt><tt class="py-op">(</tt><tt class="py-name">data</tt><tt class="py-op">,</tt> <tt class="py-name">independent_parameters</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="TwoDimensionalData"></a><div id="TwoDimensionalData-def"><a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt> <a class="py-toggle" href="#" id="TwoDimensionalData-toggle" onclick="return toggle('TwoDimensionalData');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="dynamics_sim.results.TwoDimensionalData-class.html">TwoDimensionalData</a><tt class="py-op">(</tt><tt class="py-base-class">NDimensionalData</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="TwoDimensionalData-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="TwoDimensionalData-expanded"><a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-docstring">    A subclass that aids in the graphing of two dimension data (varying one parameter across a range of values)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="TwoDimensionalData.graph"></a><div id="TwoDimensionalData.graph-def"><a name="L130"></a><tt class="py-lineno">130</tt> <a class="py-toggle" href="#" id="TwoDimensionalData.graph-toggle" onclick="return toggle('TwoDimensionalData.graph');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.results.TwoDimensionalData-class.html#graph">graph</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">equilibria</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="TwoDimensionalData.graph-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="TwoDimensionalData.graph-expanded"><a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">        <tt class="py-name">graph_options</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-name">graph_options</tt><tt class="py-op">[</tt><tt id="link-8" class="py-name"><a title="dynamics_sim.plot.GraphOptions" class="py-name" href="#" onclick="return doclink('link-8', 'GraphOptions', 'link-1');">GraphOptions</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Variable dynamics_sim.plot.GraphOptions.LEGEND_LABELS_KEY=dynamics_sim.plot.GraphOptions-class.html#LEGEND_LABELS_KEY"><a title="dynamics_sim.plot.GraphOptions.LEGEND_LABELS_KEY" class="py-name" href="#" onclick="return doclink('link-9', 'LEGEND_LABELS_KEY', 'link-9');">LEGEND_LABELS_KEY</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">i</tt><tt class="py-op">:</tt> <tt class="py-name">equilibria</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">        <tt class="py-name">x</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">independent_parameters</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-name">x_values</tt> <tt class="py-op">=</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">)</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-name">n_equilibria</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">equilibria</tt><tt class="py-op">)</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">        <tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-name">numpy</tt><tt class="py-op">.</tt><tt class="py-name">array</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">data</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">        <tt id="link-10" class="py-name"><a title="dynamics_sim.plot.plot_single_data_set" class="py-name" href="#" onclick="return doclink('link-10', 'plot_single_data_set', 'link-2');">plot_single_data_set</a></tt><tt class="py-op">(</tt><tt class="py-name">data</tt><tt class="py-op">,</tt> <tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">key</tt><tt class="py-op">,</tt> <tt class="py-name">x_values</tt><tt class="py-op">,</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">                             <tt class="py-string">"Equilibrium Proportion"</tt><tt class="py-op">,</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                             <tt class="py-string">"%s:(%.3f ... %.3f)"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">key</tt><tt class="py-op">,</tt> <tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">lb</tt><tt class="py-op">,</tt> <tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">ub</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">                             <tt class="py-name">n_equilibria</tt><tt class="py-op">,</tt> <tt class="py-name">graph_options</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"> </tt>
+<a name="ThreeDimensionalData"></a><div id="ThreeDimensionalData-def"><a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt> <a class="py-toggle" href="#" id="ThreeDimensionalData-toggle" onclick="return toggle('ThreeDimensionalData');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="dynamics_sim.results.ThreeDimensionalData-class.html">ThreeDimensionalData</a><tt class="py-op">(</tt><tt class="py-base-class">NDimensionalData</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ThreeDimensionalData-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ThreeDimensionalData-expanded"><a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-docstring">    A subclass that aids in the graphing of three dimensional data (varying two parameters)</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="ThreeDimensionalData.graph"></a><div id="ThreeDimensionalData.graph-def"><a name="L147"></a><tt class="py-lineno">147</tt> <a class="py-toggle" href="#" id="ThreeDimensionalData.graph-toggle" onclick="return toggle('ThreeDimensionalData.graph');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.results.ThreeDimensionalData-class.html#graph">graph</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">equilibria</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ThreeDimensionalData.graph-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ThreeDimensionalData.graph-expanded"><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">        <tt class="py-name">graph_options</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt class="py-name">graph_options</tt><tt class="py-op">[</tt><tt id="link-11" class="py-name"><a title="dynamics_sim.plot.GraphOptions" class="py-name" href="#" onclick="return doclink('link-11', 'GraphOptions', 'link-1');">GraphOptions</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="dynamics_sim.plot.GraphOptions.LEGEND_LABELS_KEY" class="py-name" href="#" onclick="return doclink('link-12', 'LEGEND_LABELS_KEY', 'link-9');">LEGEND_LABELS_KEY</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">i</tt><tt class="py-op">:</tt> <tt class="py-name">equilibria</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">        <tt class="py-name">x</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">independent_parameters</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">        <tt class="py-name">y</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">independent_parameters</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">        <tt class="py-name">x_values</tt> <tt class="py-op">=</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">)</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">        <tt class="py-name">y_values</tt> <tt class="py-op">=</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">        <tt class="py-name">nx</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">x_values</tt><tt class="py-op">)</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">        <tt class="py-name">ny</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">y_values</tt><tt class="py-op">)</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">        <tt class="py-name">n_equilibria</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">equilibria</tt><tt class="py-op">)</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">        <tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-name">numpy</tt><tt class="py-op">.</tt><tt class="py-name">zeros</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">nx</tt><tt class="py-op">,</tt> <tt class="py-name">ny</tt><tt class="py-op">,</tt> <tt class="py-name">n_equilibria</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">nx</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">j</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">ny</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">                <tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">,</tt> <tt class="py-name">j</tt><tt class="py-op">,</tt> <tt class="py-op">:</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-name">j</tt><tt class="py-op">]</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">        <tt id="link-13" class="py-name"><a title="dynamics_sim.plot.plot_3d_data_set" class="py-name" href="#" onclick="return doclink('link-13', 'plot_3d_data_set', 'link-3');">plot_3d_data_set</a></tt><tt class="py-op">(</tt><tt class="py-name">data</tt><tt class="py-op">,</tt> <tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">key</tt><tt class="py-op">,</tt> <tt class="py-name">x_values</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">.</tt><tt class="py-name">key</tt><tt class="py-op">,</tt> <tt class="py-name">y_values</tt><tt class="py-op">,</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">                         <tt class="py-string">"Equilibrium Proportion"</tt><tt class="py-op">,</tt> <tt class="py-string">"%s:(%.3f ... %.3f), %s:(%.3f ... %.3f) "</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">key</tt><tt class="py-op">,</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">                                                                                                <tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">lb</tt><tt class="py-op">,</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">                                                                                                <tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">ub</tt><tt class="py-op">,</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">                                                                                                <tt class="py-name">y</tt><tt class="py-op">.</tt><tt class="py-name">key</tt><tt class="py-op">,</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">                                                                                                <tt class="py-name">y</tt><tt class="py-op">.</tt><tt class="py-name">lb</tt><tt class="py-op">,</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">                                                                                                <tt class="py-name">y</tt><tt class="py-op">.</tt><tt class="py-name">ub</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">                         <tt class="py-name">n_equilibria</tt><tt class="py-op">,</tt> <tt class="py-name">graph_options</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu May  1 19:08:04 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

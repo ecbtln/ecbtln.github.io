@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>dynamics_sim.dynamics.dynamics.DynamicsSimulator</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="dynamics_sim-module.html">Package&nbsp;dynamics_sim</a> ::
+        <a href="dynamics_sim.dynamics-module.html">Package&nbsp;dynamics</a> ::
+        <a href="dynamics_sim.dynamics.dynamics-module.html">Module&nbsp;dynamics</a> ::
+        Class&nbsp;DynamicsSimulator
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class DynamicsSimulator</h1><p class="nomargin-top"><span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">DynamicsSimulator</strong>
+</pre>
+
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="dynamics_sim.dynamics.dynamics.StochasticDynamicsSimulator-class.html">StochasticDynamicsSimulator</a></li>  </ul>
+</dd></dl>
+
+<hr />
+<p>An abstract class that is used as the super class for all dynamics 
+  simulations, both stochastic and deterministic. This class roughly 
+  corresponds to the replicator rules aspect of evolutionary game theory, 
+  as outlined on <a 
+  href="http://en.wikipedia.org/wiki/Evolutionary_game_theory#Models" 
+  target="_top">Wikipedia</a></p>
+
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="abc.ABCMeta-class.html" class="summary-name">__metaclass__</a><br />
+      Metaclass for defining Abstract Base Classes (ABCs).
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">payoff_matrix</span>,
+        <span class="summary-sig-arg">player_frequencies</span>,
+        <span class="summary-sig-arg">pop_size</span>=<span class="summary-sig-default">100</span>,
+        <span class="summary-sig-arg">stochastic</span>=<span class="summary-sig-default">False</span>)</span><br />
+      The constructor for the abstract class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html#next_generation" class="summary-sig-name">next_generation</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">previous</span>)</span><br />
+      An abstract method that must be overridden assuming the default 
+      implementation of the simulate() method in order to define the state 
+      transition from generation i to generation i + 1.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.next_generation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html#validate_state" class="summary-sig-name">validate_state</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">s</span>)</span><br />
+      Verifies validity of state, each state is an array of numpy arrays, 
+      one for every player type Also needs to coerce any arrays to numpy 
+      arrays</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.validate_state">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list(2x2 array)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html#simulate" class="summary-sig-name">simulate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">num_gens</span>=<span class="summary-sig-default">100</span>,
+        <span class="summary-sig-arg">debug_state</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Simulate the game for the given number of generations, optinally 
+      starting at a provided state.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.simulate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== STATIC METHODS ==================== -->
+<a name="section-StaticMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Static Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-StaticMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">iterable</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html#round_individuals" class="summary-sig-name">round_individuals</a>(<span class="summary-sig-arg">unrounded_frequencies</span>)</span><br />
+      Due to integer cutoffs, the number of senders and receivers might not
+      be consistent.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.round_individuals">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__abstractmethods__"></a><span class="summary-name">__abstractmethods__</span> = <code title="frozenset(['next_generation'])"><code class="variable-group">frozenset([</code><code class="variable-quote">'</code><code class="variable-string">next_generation</code><code class="variable-quote">'</code><code class="variable-group">])</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_cache"></a><span class="summary-name">_abc_cache</span> = <code title="&lt;_weakrefset.WeakSet object at 0x10e229590&gt;">&lt;_weakrefset.WeakSet object at 0x10e229590&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_negative_cache"></a><span class="summary-name">_abc_negative_cache</span> = <code title="&lt;_weakrefset.WeakSet object at 0x10e2295d0&gt;">&lt;_weakrefset.WeakSet object at 0x10e2295d0&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_negative_cache_version"></a><span class="summary-name">_abc_negative_cache_version</span> = <code title="10">10</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_registry"></a><span class="summary-name">_abc_registry</span> = <code title="&lt;_weakrefset.WeakSet object at 0x10e229550&gt;">&lt;_weakrefset.WeakSet object at 0x10e229550&gt;</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">payoff_matrix</span>,
+        <span class="sig-arg">player_frequencies</span>,
+        <span class="sig-arg">pop_size</span>=<span class="sig-default">100</span>,
+        <span class="sig-arg">stochastic</span>=<span class="sig-default">False</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The constructor for the abstract class. This doesn't need to be called
+  directly, as it is called by @see <a 
+  href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html" 
+  class="link">GameDynamicsWrapper</a></p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>payoff_matrix</code></strong> (PayoffMatrix) - the <a href="dynamics_sim.payoff_matrix.PayoffMatrix-class.html" 
+          class="link">PayoffMatrix</a> object that defines the game</li>
+        <li><strong class="pname"><code>player_frequencies</code></strong> (iterable) - a list indicating the relative frequency of each type of player, 
+          must sum to 1</li>
+        <li><strong class="pname"><code>pop_size</code></strong> (int) - the size of the population to use. If zero, infinite population 
+          size is used, or else a finite population size is used and 
+          players are never divided into parts.</li>
+        <li><strong class="pname"><code>stochastic</code></strong> (bool) - whether or not the simulation is stochastic (True) or 
+          deterministic (False)</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="next_generation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">next_generation</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">previous</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.next_generation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>An abstract method that must be overridden assuming the default 
+  implementation of the simulate() method in order to define the state 
+  transition from generation i to generation i + 1.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>previous</code></strong> (list) - The state of the population(s) before the transition, represented
+          as an array of arrays. Each entry in the parent array refers to a
+          player type, each entry in each sublist refers to the number or 
+          frequency of players playing that strategy.</li>
+    </ul></dd>
+    <dt>Returns: list</dt>
+        <dd>the subsequent distribution of players by player type, after the 
+          state transition</dd>
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@abstractmethod</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="validate_state"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">validate_state</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">s</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.validate_state">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Verifies validity of state, each state is an array of numpy arrays, 
+  one for every player type Also needs to coerce any arrays to numpy 
+  arrays</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>s</code></strong> (list(list())) - the array representation of the state</li>
+    </ul></dd>
+    <dt>Returns: bool</dt>
+        <dd>whether or not the state is valid</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="simulate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">simulate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">num_gens</span>=<span class="sig-default">100</span>,
+        <span class="sig-arg">debug_state</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.simulate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Simulate the game for the given number of generations, optinally 
+  starting at a provided state. Subclasses may override this method if they
+  would like to calculate the dynamics in an alternate fashion other than 
+  the traditional timestep method.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>num_gens</code></strong> (int) - the number of iterations of the simulation.</li>
+        <li><strong class="pname"><code>debug_state</code></strong> (list or None) - An optional list of distributions of strategies for each player.</li>
+    </ul></dd>
+    <dt>Returns: list(2x2 array)</dt>
+        <dd>the list of states that the simulation steps through in each 
+          generation</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="round_individuals"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">round_individuals</span>(<span class="sig-arg">unrounded_frequencies</span>)</span>
+    <br /><em class="fname">Static Method</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.dynamics.dynamics-pysrc.html#DynamicsSimulator.round_individuals">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Due to integer cutoffs, the number of senders and receivers might not 
+  be consistent. This take the integer part of each of the inputs and then 
+  assign the remaining few leftovers (so that the sum is the sum of the 
+  original floats) in a way such that the numbers with higher decimal parts
+  will get the extra int before those with lower.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>unrounded_frequencies</code></strong> (iterable) - an iterable of floats representing the unrounded frequencies of 
+          players playing each strategy</li>
+    </ul></dd>
+    <dt>Returns: iterable</dt>
+        <dd>an iterable of frequencies of the same length, that sums to the 
+          same total.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu May  1 19:08:03 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

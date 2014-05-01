@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>dynamics_sim.games.game</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="dynamics_sim-module.html">Package&nbsp;dynamics_sim</a> ::
+        <a href="dynamics_sim.games-module.html">Package&nbsp;games</a> ::
+        Module&nbsp;game
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="dynamics_sim.games.game-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="dynamics_sim.games.game-module.html">Module dynamics_sim.games.game</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-docstring">'elubin'</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package dynamics_sim=dynamics_sim-module.html"><a title="dynamics_sim" class="py-name" href="#" onclick="return doclink('link-0', 'dynamics_sim', 'link-0');">dynamics_sim</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module dynamics_sim.payoff_matrix=dynamics_sim.payoff_matrix-module.html"><a title="dynamics_sim.payoff_matrix" class="py-name" href="#" onclick="return doclink('link-1', 'payoff_matrix', 'link-1');">payoff_matrix</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Class dynamics_sim.payoff_matrix.PayoffMatrix=dynamics_sim.payoff_matrix.PayoffMatrix-class.html"><a title="dynamics_sim.payoff_matrix.PayoffMatrix" class="py-name" href="#" onclick="return doclink('link-2', 'PayoffMatrix', 'link-2');">PayoffMatrix</a></tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable dynamics_sim.games.game.UNCLASSIFIED_EQUILIBRIUM=dynamics_sim.games.game-module.html#UNCLASSIFIED_EQUILIBRIUM"><a title="dynamics_sim.games.game.UNCLASSIFIED_EQUILIBRIUM" class="py-name" href="#" onclick="return doclink('link-3', 'UNCLASSIFIED_EQUILIBRIUM', 'link-3');">UNCLASSIFIED_EQUILIBRIUM</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'Unclassified'</tt>  <tt class="py-comment">#: the string used to identify an equilibrium that did not match any of the classification rules</tt> </tt>
+<a name="Game"></a><div id="Game-def"><a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt> <a class="py-toggle" href="#" id="Game-toggle" onclick="return toggle('Game');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="dynamics_sim.games.game.Game-class.html">Game</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Game-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Game-expanded"><a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    A class that is used to encapsulate the notion of a game theory game Each game is identified by a set number of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">    players, each choosing from a pre-determined set of strategies, as well as the logic the defines the equilibria</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">    for the game.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">    <tt id="link-4" class="py-name" targets="Variable dynamics_sim.games.game.Game.DEFAULT_PARAMS=dynamics_sim.games.game.Game-class.html#DEFAULT_PARAMS,Variable dynamics_sim.games.hawk_dove.HawkDove.DEFAULT_PARAMS=dynamics_sim.games.hawk_dove.HawkDove-class.html#DEFAULT_PARAMS,Variable dynamics_sim.games.hdb.HawkDoveBourgeois.DEFAULT_PARAMS=dynamics_sim.games.hdb.HawkDoveBourgeois-class.html#DEFAULT_PARAMS"><a title="dynamics_sim.games.game.Game.DEFAULT_PARAMS
+dynamics_sim.games.hawk_dove.HawkDove.DEFAULT_PARAMS
+dynamics_sim.games.hdb.HawkDoveBourgeois.DEFAULT_PARAMS" class="py-name" href="#" onclick="return doclink('link-4', 'DEFAULT_PARAMS', 'link-4');">DEFAULT_PARAMS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt>  <tt class="py-comment">#: the default parameters that are passed into the constructor by the L{GameDynamicsWrapper}</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">    <tt id="link-5" class="py-name" targets="Variable dynamics_sim.games.game.Game.PLAYER_LABELS=dynamics_sim.games.game.Game-class.html#PLAYER_LABELS,Variable dynamics_sim.games.hawk_dove.HawkDove.PLAYER_LABELS=dynamics_sim.games.hawk_dove.HawkDove-class.html#PLAYER_LABELS"><a title="dynamics_sim.games.game.Game.PLAYER_LABELS
+dynamics_sim.games.hawk_dove.HawkDove.PLAYER_LABELS" class="py-name" href="#" onclick="return doclink('link-5', 'PLAYER_LABELS', 'link-5');">PLAYER_LABELS</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt>  <tt class="py-comment">#: a list of labels to apply to each player in the game, used in graphing</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">    <tt id="link-6" class="py-name" targets="Variable dynamics_sim.games.game.Game.STRATEGY_LABELS=dynamics_sim.games.game.Game-class.html#STRATEGY_LABELS,Variable dynamics_sim.games.hawk_dove.HawkDove.STRATEGY_LABELS=dynamics_sim.games.hawk_dove.HawkDove-class.html#STRATEGY_LABELS,Variable dynamics_sim.games.hdb.HawkDoveBourgeois.STRATEGY_LABELS=dynamics_sim.games.hdb.HawkDoveBourgeois-class.html#STRATEGY_LABELS"><a title="dynamics_sim.games.game.Game.STRATEGY_LABELS
+dynamics_sim.games.hawk_dove.HawkDove.STRATEGY_LABELS
+dynamics_sim.games.hdb.HawkDoveBourgeois.STRATEGY_LABELS" class="py-name" href="#" onclick="return doclink('link-6', 'STRATEGY_LABELS', 'link-6');">STRATEGY_LABELS</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt>  <tt class="py-comment">#: a list of lists of strings that name the available strategies for each player</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">    <tt id="link-7" class="py-name" targets="Variable dynamics_sim.games.game.Game.EQUILIBRIA_LABELS=dynamics_sim.games.game.Game-class.html#EQUILIBRIA_LABELS"><a title="dynamics_sim.games.game.Game.EQUILIBRIA_LABELS" class="py-name" href="#" onclick="return doclink('link-7', 'EQUILIBRIA_LABELS', 'link-7');">EQUILIBRIA_LABELS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-op">)</tt>  <tt class="py-comment">#: a list of labels corresponding to the integers returned by the classify function</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="Game.__init__"></a><div id="Game.__init__-def"><a name="L20"></a><tt class="py-lineno"> 20</tt> <a class="py-toggle" href="#" id="Game.__init__-toggle" onclick="return toggle('Game.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.games.game.Game-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">payoff_matrices</tt><tt class="py-op">,</tt> <tt class="py-param">player_frequencies</tt><tt class="py-op">,</tt> <tt class="py-param">equilibrium_tolerance</tt><tt class="py-op">=</tt><tt class="py-number">0.1</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Game.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Game.__init__-expanded"><a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-docstring">        Initializes the game class with the give list of payoff matrices and distribution of players, as well as</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">        a notion of the equilibrium tolerance.</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">        @param payoff_matrices: a list of recursive lists representing the payoff matrix for each player, see L{PayoffMatrix} for more info</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">        @type payoff_matrices: list</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">        @param player_frequencies: a list that describes the distribution of players by player type, must sum to 1</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">        @type player_frequencies: list or tuple</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">        @param equilibrium_tolerance: the flexibility that should be used for equilibrium classification. An</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">            equilibrium is classified as such if 1 - equlibrium_tolerance proportion of people are playing a given</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">            set of strategies</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-docstring">        @type equilibrium_tolerance: float</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-name">payoff_matrices</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-name">player_frequencies</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="dynamics_sim.games.game.Game.PLAYER_LABELS
+dynamics_sim.games.hawk_dove.HawkDove.PLAYER_LABELS" class="py-name" href="#" onclick="return doclink('link-8', 'PLAYER_LABELS', 'link-5');">PLAYER_LABELS</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">            <tt class="py-keyword">assert</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">player_frequencies</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="dynamics_sim.games.game.Game.PLAYER_LABELS
+dynamics_sim.games.hawk_dove.HawkDove.PLAYER_LABELS" class="py-name" href="#" onclick="return doclink('link-9', 'PLAYER_LABELS', 'link-5');">PLAYER_LABELS</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">pm</tt> <tt class="py-op">=</tt> <tt id="link-10" class="py-name"><a title="dynamics_sim.payoff_matrix.PayoffMatrix" class="py-name" href="#" onclick="return doclink('link-10', 'PayoffMatrix', 'link-2');">PayoffMatrix</a></tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">player_frequencies</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">payoff_matrices</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="dynamics_sim.games.game.Game.STRATEGY_LABELS
+dynamics_sim.games.hawk_dove.HawkDove.STRATEGY_LABELS
+dynamics_sim.games.hdb.HawkDoveBourgeois.STRATEGY_LABELS" class="py-name" href="#" onclick="return doclink('link-11', 'STRATEGY_LABELS', 'link-6');">STRATEGY_LABELS</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">labels_i</tt><tt class="py-op">,</tt> <tt class="py-name">num_strats</tt>  <tt class="py-keyword">in</tt> <tt class="py-name">zip</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="dynamics_sim.games.game.Game.STRATEGY_LABELS
+dynamics_sim.games.hawk_dove.HawkDove.STRATEGY_LABELS
+dynamics_sim.games.hdb.HawkDoveBourgeois.STRATEGY_LABELS" class="py-name" href="#" onclick="return doclink('link-12', 'STRATEGY_LABELS', 'link-6');">STRATEGY_LABELS</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">pm</tt><tt class="py-op">.</tt><tt class="py-name">num_strats</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">                <tt class="py-keyword">assert</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">labels_i</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">num_strats</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">player_frequencies</tt> <tt class="py-op">=</tt> <tt class="py-name">player_frequencies</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">equilibrium_tolerance</tt> <tt class="py-op">=</tt> <tt class="py-name">equilibrium_tolerance</tt> </tt>
+</div><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">classmethod</tt> </tt>
+<a name="Game.classify"></a><div id="Game.classify-def"><a name="L48"></a><tt class="py-lineno"> 48</tt> <a class="py-toggle" href="#" id="Game.classify-toggle" onclick="return toggle('Game.classify');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.games.game.Game-class.html#classify">classify</a><tt class="py-op">(</tt><tt class="py-param">cls</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">state</tt><tt class="py-op">,</tt> <tt class="py-param">tolerance</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Game.classify-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Game.classify-expanded"><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-docstring">        A class method that should be override by subclasses to help classify equilibria as a function of the current</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-docstring">        state of the population, the parameters to the game instance's constructor, and the equilibrium tolerance.</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: An object that encapsulates all the parameters passed in to this object's constructor.</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: L{Obj}</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">        @param state: a list of lists representing the distribution of players in each state</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-docstring">        @type state: list(list())</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">        @param tolerance: the equilibrium tolerance with which the instance was constructed</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">        @type tolerance: float</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring">        @return: an integer representing the index of the equilibrium to which the state corresponds.</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: int</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt> </tt>
+</div><a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">classmethod</tt> </tt>
+<a name="Game.num_equilibria"></a><div id="Game.num_equilibria-def"><a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="Game.num_equilibria-toggle" onclick="return toggle('Game.num_equilibria');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.games.game.Game-class.html#num_equilibria">num_equilibria</a><tt class="py-op">(</tt><tt class="py-param">cls</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Game.num_equilibria-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Game.num_equilibria-expanded"><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">        Get the number of equilibria for the game. This is one more than the number defined by the user.</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-docstring">        @return: the # of equilibria</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: int</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">cls</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="dynamics_sim.games.game.Game.EQUILIBRIA_LABELS" class="py-name" href="#" onclick="return doclink('link-13', 'EQUILIBRIA_LABELS', 'link-7');">EQUILIBRIA_LABELS</a></tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-number">1</tt> </tt>
+</div><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">classmethod</tt> </tt>
+<a name="Game.get_equilibria"></a><div id="Game.get_equilibria-def"><a name="L74"></a><tt class="py-lineno"> 74</tt> <a class="py-toggle" href="#" id="Game.get_equilibria-toggle" onclick="return toggle('Game.get_equilibria');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.games.game.Game-class.html#get_equilibria">get_equilibria</a><tt class="py-op">(</tt><tt class="py-param">cls</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Game.get_equilibria-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Game.get_equilibria-expanded"><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">        Get the list of equilibria defined by the class, plus the string representing the unclassified equlibrium, which</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring">        can be easily accessed by indexing -1 on the tuple.</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">        @return: a tuple of strings of the equilibrium labels</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: tuple</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">tuple</tt><tt class="py-op">(</tt><tt class="py-name">cls</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="dynamics_sim.games.game.Game.EQUILIBRIA_LABELS" class="py-name" href="#" onclick="return doclink('link-14', 'EQUILIBRIA_LABELS', 'link-7');">EQUILIBRIA_LABELS</a></tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-op">(</tt><tt id="link-15" class="py-name"><a title="dynamics_sim.games.game.UNCLASSIFIED_EQUILIBRIUM" class="py-name" href="#" onclick="return doclink('link-15', 'UNCLASSIFIED_EQUILIBRIUM', 'link-3');">UNCLASSIFIED_EQUILIBRIUM</a></tt><tt class="py-op">,</tt> <tt class="py-op">)</tt> </tt>
+</div></div><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
+<a name="SymmetricNPlayerGame"></a><div id="SymmetricNPlayerGame-def"><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-comment"># common case is n =2, but we support as big N as needed</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt> <a class="py-toggle" href="#" id="SymmetricNPlayerGame-toggle" onclick="return toggle('SymmetricNPlayerGame');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="dynamics_sim.games.game.SymmetricNPlayerGame-class.html">SymmetricNPlayerGame</a><tt class="py-op">(</tt><tt class="py-base-class">Game</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SymmetricNPlayerGame-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="SymmetricNPlayerGame-expanded"><a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring">    A convenience class that provides the logic for an N player game where each player chooses the from the same strategy</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">    set.</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="SymmetricNPlayerGame.__init__"></a><div id="SymmetricNPlayerGame.__init__-def"><a name="L91"></a><tt class="py-lineno"> 91</tt> <a class="py-toggle" href="#" id="SymmetricNPlayerGame.__init__-toggle" onclick="return toggle('SymmetricNPlayerGame.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="dynamics_sim.games.game.SymmetricNPlayerGame-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">payoff_matrix</tt><tt class="py-op">,</tt> <tt class="py-param">n</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SymmetricNPlayerGame.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="SymmetricNPlayerGame.__init__-expanded"><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-docstring">        Initialize the symmetric game with the given payoff matrix and number of playeres</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">        @param payoff_matrix: a recursive list representing the payoff matrix for each player, see L{PayoffMatrix}</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">        @type payoff_matrix: list(list())</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">        @param n: the number of players in the game</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">        @type n: int</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="dynamics_sim.games.game.Game.STRATEGY_LABELS
+dynamics_sim.games.hawk_dove.HawkDove.STRATEGY_LABELS
+dynamics_sim.games.hdb.HawkDoveBourgeois.STRATEGY_LABELS" class="py-name" href="#" onclick="return doclink('link-16', 'STRATEGY_LABELS', 'link-6');">STRATEGY_LABELS</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="dynamics_sim.games.game.Game.STRATEGY_LABELS
+dynamics_sim.games.hawk_dove.HawkDove.STRATEGY_LABELS
+dynamics_sim.games.hdb.HawkDoveBourgeois.STRATEGY_LABELS" class="py-name" href="#" onclick="return doclink('link-17', 'STRATEGY_LABELS', 'link-6');">STRATEGY_LABELS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="dynamics_sim.games.game.Game.STRATEGY_LABELS
+dynamics_sim.games.hawk_dove.HawkDove.STRATEGY_LABELS
+dynamics_sim.games.hdb.HawkDoveBourgeois.STRATEGY_LABELS" class="py-name" href="#" onclick="return doclink('link-18', 'STRATEGY_LABELS', 'link-6');">STRATEGY_LABELS</a></tt><tt class="py-op">,</tt> <tt class="py-op">)</tt> <tt class="py-op">*</tt> <tt class="py-name">n</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-comment"># TODO: append as many as specified by num_players! not just one more</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-comment"># TODO: just need to think how to "transpose" a multidimensional matrix</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-comment"># interpreted as multiple instances of the same player, append the transpose</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-name">payoff_matrix_2</tt> <tt class="py-op">=</tt> <tt class="py-name">tuple</tt><tt class="py-op">(</tt><tt class="py-name">map</tt><tt class="py-op">(</tt><tt class="py-name">tuple</tt><tt class="py-op">,</tt> <tt class="py-name">zip</tt><tt class="py-op">(</tt><tt class="py-op">*</tt><tt id="link-19" class="py-name"><a title="dynamics_sim.payoff_matrix" class="py-name" href="#" onclick="return doclink('link-19', 'payoff_matrix', 'link-1');">payoff_matrix</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-comment"># transpose</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-name">matrices</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-20" class="py-name"><a title="dynamics_sim.payoff_matrix" class="py-name" href="#" onclick="return doclink('link-20', 'payoff_matrix', 'link-1');">payoff_matrix</a></tt><tt class="py-op">,</tt> <tt class="py-name">payoff_matrix_2</tt><tt class="py-op">]</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-name">player_dist</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-number">0.5</tt><tt class="py-op">,</tt> <tt class="py-op">)</tt> <tt class="py-op">*</tt> <tt class="py-name">n</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-21" class="py-name" targets="Class dynamics_sim.games.game.SymmetricNPlayerGame=dynamics_sim.games.game.SymmetricNPlayerGame-class.html"><a title="dynamics_sim.games.game.SymmetricNPlayerGame" class="py-name" href="#" onclick="return doclink('link-21', 'SymmetricNPlayerGame', 'link-21');">SymmetricNPlayerGame</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method dynamics_sim.dynamics.dynamics.DynamicsSimulator.__init__()=dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html#__init__,Method dynamics_sim.dynamics.dynamics.StochasticDynamicsSimulator.__init__()=dynamics_sim.dynamics.dynamics.StochasticDynamicsSimulator-class.html#__init__,Method dynamics_sim.dynamics.moran.Moran.__init__()=dynamics_sim.dynamics.moran.Moran-class.html#__init__,Method dynamics_sim.dynamics.wright_fisher.WrightFisher.__init__()=dynamics_sim.dynamics.wright_fisher.WrightFisher-class.html#__init__,Method dynamics_sim.games.game.Game.__init__()=dynamics_sim.games.game.Game-class.html#__init__,Method dynamics_sim.games.game.SymmetricNPlayerGame.__init__()=dynamics_sim.games.game.SymmetricNPlayerGame-class.html#__init__,Method dynamics_sim.games.hawk_dove.HawkDove.__init__()=dynamics_sim.games.hawk_dove.HawkDove-class.html#__init__,Method dynamics_sim.games.hdb.HawkDoveBourgeois.__init__()=dynamics_sim.games.hdb.HawkDoveBourgeois-class.html#__init__,Method dynamics_sim.payoff_matrix.PayoffMatrix.__init__()=dynamics_sim.payoff_matrix.PayoffMatrix-class.html#__init__,Method dynamics_sim.results.NDimensionalData.__init__()=dynamics_sim.results.NDimensionalData-class.html#__init__,Method dynamics_sim.util.Obj.__init__()=dynamics_sim.util.Obj-class.html#__init__,Method dynamics_sim.wrapper.DependentParameter.__init__()=dynamics_sim.wrapper.DependentParameter-class.html#__init__,Method dynamics_sim.wrapper.GameDynamicsWrapper.__init__()=dynamics_sim.wrapper.GameDynamicsWrapper-class.html#__init__,Method dynamics_sim.wrapper.IndependentParameter.__init__()=dynamics_sim.wrapper.IndependentParameter-class.html#__init__,Method dynamics_sim.wrapper.VariedGame.__init__()=dynamics_sim.wrapper.VariedGame-class.html#__init__,Method dynamics_sim.wrapper.VerboseIndependentParameter.__init__()=dynamics_sim.wrapper.VerboseIndependentParameter-class.html#__init__"><a title="dynamics_sim.dynamics.dynamics.DynamicsSimulator.__init__
+dynamics_sim.dynamics.dynamics.StochasticDynamicsSimulator.__init__
+dynamics_sim.dynamics.moran.Moran.__init__
+dynamics_sim.dynamics.wright_fisher.WrightFisher.__init__
+dynamics_sim.games.game.Game.__init__
+dynamics_sim.games.game.SymmetricNPlayerGame.__init__
+dynamics_sim.games.hawk_dove.HawkDove.__init__
+dynamics_sim.games.hdb.HawkDoveBourgeois.__init__
+dynamics_sim.payoff_matrix.PayoffMatrix.__init__
+dynamics_sim.results.NDimensionalData.__init__
+dynamics_sim.util.Obj.__init__
+dynamics_sim.wrapper.DependentParameter.__init__
+dynamics_sim.wrapper.GameDynamicsWrapper.__init__
+dynamics_sim.wrapper.IndependentParameter.__init__
+dynamics_sim.wrapper.VariedGame.__init__
+dynamics_sim.wrapper.VerboseIndependentParameter.__init__" class="py-name" href="#" onclick="return doclink('link-22', '__init__', 'link-22');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">payoff_matrices</tt><tt class="py-op">=</tt><tt class="py-name">matrices</tt><tt class="py-op">,</tt> <tt class="py-name">player_frequencies</tt><tt class="py-op">=</tt><tt class="py-name">player_dist</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu May  1 19:08:03 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

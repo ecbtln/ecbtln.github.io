@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>dynamics_sim.wrapper.GameDynamicsWrapper</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="dynamics_sim-module.html">Package&nbsp;dynamics_sim</a> ::
+        <a href="dynamics_sim.wrapper-module.html">Module&nbsp;wrapper</a> ::
+        Class&nbsp;GameDynamicsWrapper
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class GameDynamicsWrapper</h1><p class="nomargin-top"><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">GameDynamicsWrapper</strong>
+</pre>
+
+<hr />
+<p>A helper class that wraps a dynamics class and a game class and 
+  provides helper methods for simulation.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">game_cls</span>,
+        <span class="summary-sig-arg">dynamics_cls</span>,
+        <span class="summary-sig-arg">game_kwargs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dynamics_kwargs</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialize the wrapper with a subclass of Game and DynamicsSimulator,
+      and optional keyword arguments that override the defaults</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html#update_game_kwargs" class="summary-sig-name">update_game_kwargs</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Update the default values of the arguments to the game constructor.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.update_game_kwargs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html#update_dynamics_kwargs" class="summary-sig-name">update_dynamics_kwargs</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Update the default values of the arguments to the dynamics 
+      constructor.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.update_dynamics_kwargs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">numpy.ndarray or dict</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html#simulate" class="summary-sig-name">simulate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">num_gens</span>=<span class="summary-sig-default">300</span>,
+        <span class="summary-sig-arg">graph</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">return_labeled</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Simulate the game for the given number of generations with the 
+      specified dynamics class and optionally graph the results</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.simulate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">numpy.ndarray or dict</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html#simulate_many" class="summary-sig-name">simulate_many</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">num_iterations</span>=<span class="summary-sig-default">100</span>,
+        <span class="summary-sig-arg">num_gens</span>=<span class="summary-sig-default">300</span>,
+        <span class="summary-sig-arg">return_labeled</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">parallelize</span>=<span class="summary-sig-default">True</span>)</span><br />
+      A helper method to call the simulate methods num_iterations times 
+      simulating num_gens generations each time, and then averaging the 
+      frequency of the resulting equilibria.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.simulate_many">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_convert_equilibria_frequencies"></a><span class="summary-sig-name">_convert_equilibria_frequencies</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">frequencies</span>)</span><br />
+      Convert the list of frequencies of equilibria to a dictionary mapping
+      equilibrium name to frequency</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper._convert_equilibria_frequencies">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== STATIC METHODS ==================== -->
+<a name="section-StaticMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Static Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-StaticMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_static_convert_equilibria_frequencies"></a><span class="summary-sig-name">_static_convert_equilibria_frequencies</span>(<span class="summary-sig-arg">game_cls</span>,
+        <span class="summary-sig-arg">frequencies</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper._static_convert_equilibria_frequencies">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">game_cls</span>,
+        <span class="sig-arg">dynamics_cls</span>,
+        <span class="sig-arg">game_kwargs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dynamics_kwargs</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize the wrapper with a subclass of Game and DynamicsSimulator, 
+  and optional keyword arguments that override the defaults</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>game_cls</code></strong> (<a href="dynamics_sim.games.game.Game-class.html" 
+          class="link">Game</a>.__class__) - the game to wrap</li>
+        <li><strong class="pname"><code>dynamics_cls</code></strong> (<a 
+          href="dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html"
+          class="link">DynamicsSimulator</a>.__class__) - the type of dynamics to use</li>
+        <li><strong class="pname"><code>game_kwargs</code></strong> (dict) - any keyword arguments that will be passed to the game class on 
+          initialization</li>
+        <li><strong class="pname"><code>dynamics_kwargs</code></strong> (dict) - any keyword arguments that will be passed to the dynamics class 
+          on initialization</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="update_game_kwargs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_game_kwargs</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.update_game_kwargs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Update the default values of the arguments to the game 
+  constructor.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dictionary(s) to update the values with</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - keys of the dictionary to update.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="update_dynamics_kwargs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_dynamics_kwargs</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.update_dynamics_kwargs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Update the default values of the arguments to the dynamics 
+  constructor.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dictionary(s) to update the values with</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - keys of the dictionary to update.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="simulate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">simulate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">num_gens</span>=<span class="sig-default">300</span>,
+        <span class="sig-arg">graph</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">return_labeled</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.simulate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Simulate the game for the given number of generations with the 
+  specified dynamics class and optionally graph the results</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>num_gens</code></strong> (int) - the number of iterations of the simulation.</li>
+        <li><strong class="pname"><code>graph</code></strong> (bool) - whether or not the results should be graphed</li>
+        <li><strong class="pname"><code>return_labeled</code></strong> (bool) - whether the distribution of classified equilibria that are 
+          returned should be labelled or simply listed with their keys 
+          inferred by their order</li>
+    </ul></dd>
+    <dt>Returns: numpy.ndarray or dict</dt>
+        <dd>the frequency of time spent in each equilibria, defined by the 
+          game</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="simulate_many"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">simulate_many</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">num_iterations</span>=<span class="sig-default">100</span>,
+        <span class="sig-arg">num_gens</span>=<span class="sig-default">300</span>,
+        <span class="sig-arg">return_labeled</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">parallelize</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#GameDynamicsWrapper.simulate_many">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A helper method to call the simulate methods num_iterations times 
+  simulating num_gens generations each time, and then averaging the 
+  frequency of the resulting equilibria. Method calls are parallelized and 
+  attempt to use all available cores on the machine.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>num_iterations</code></strong> (int) - the number of times to iterate the simulation</li>
+        <li><strong class="pname"><code>num_gens</code></strong> (int) - the number of generations to run each simulation witu</li>
+        <li><strong class="pname"><code>return_labeled</code></strong> (bool) - whether the distribution of classified equilibria that are 
+          returned should be labelled or simply listed with their keys 
+          inferred by their order</li>
+        <li><strong class="pname"><code>parallelize</code></strong> (bool) - whether or not to parallelize the computation, defaults to true, 
+          but an override when varying the parameters, as seen in the <a 
+          href="dynamics_sim.wrapper.VariedGame-class.html" 
+          class="link">VariedGame</a> class to achieve coarser 
+          parallelization</li>
+    </ul></dd>
+    <dt>Returns: numpy.ndarray or dict</dt>
+        <dd>the frequency of time spent in each equilibria, defined by the 
+          game</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu May  1 19:08:03 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

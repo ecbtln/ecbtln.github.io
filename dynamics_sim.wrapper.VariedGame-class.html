@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>dynamics_sim.wrapper.VariedGame</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="dynamics_sim-module.html">Package&nbsp;dynamics_sim</a> ::
+        <a href="dynamics_sim.wrapper-module.html">Module&nbsp;wrapper</a> ::
+        Class&nbsp;VariedGame
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="dynamics_sim.wrapper.VariedGame-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class VariedGame</h1><p class="nomargin-top"><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">VariedGame</strong>
+</pre>
+
+<hr />
+<p>A class that wraps the <a 
+  href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html" 
+  class="link">GameDynamicsWrapper</a> class and simplifies the process of 
+  varying multiple parameteres to the simulation at once, and then graphing
+  the effect one or more parameters have on the resulting equilibrium 
+  distribution of repeated simulations.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.VariedGame-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">game_cls</span>,
+        <span class="summary-sig-arg">dynamics_cls</span>,
+        <span class="summary-sig-arg">game_kwargs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dynamics_kwargs</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialize the wrapper with a subclass of Game and DynamicsSimulator,
+      and optional keyword arguments that override the defaults</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="dynamics_sim.results.NDimensionalData-class.html" 
+      class="link">NDimensionalData</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.VariedGame-class.html#vary_param" class="summary-sig-name">vary_param</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">kw</span>,
+        <span class="summary-sig-arg">(low, high, num_steps)</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      A helper function to vary one parameter of the game instance over a 
+      range of values, and graph the results</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame.vary_param">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="dynamics_sim.results.NDimensionalData-class.html" 
+      class="link">NDimensionalData</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.VariedGame-class.html#vary_2params" class="summary-sig-name">vary_2params</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">kw1</span>,
+        <span class="summary-sig-arg">(low1, high1, num_steps1)</span>,
+        <span class="summary-sig-arg">kw2</span>,
+        <span class="summary-sig-arg">(low2, high2, num_steps2)</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      A helper function to vary two parameters of the game instance over an
+      independent range of values, and graph the results.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame.vary_2params">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.VariedGame-class.html#vary" class="summary-sig-name">vary</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">game_kwargs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dynamics_kwargs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">num_iterations</span>=<span class="summary-sig-default">100</span>,
+        <span class="summary-sig-arg">num_gens</span>=<span class="summary-sig-default">300</span>,
+        <span class="summary-sig-arg">graph</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">parallelize</span>=<span class="summary-sig-default">True</span>)</span><br />
+      We can vary the game kwargs, the dynamics kwargs, as well as any 
+      number of indirect inputs, if needed Each of these parameters must be
+      an iterable of dictionaries, in the following form:</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame.vary">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_vary_kwargs"></a><span class="summary-sig-name">_vary_kwargs</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ips</span>,
+        <span class="summary-sig-arg">dependent_params</span>,
+        <span class="summary-sig-arg">sim_wrapper</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame._vary_kwargs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list(list(...))</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="dynamics_sim.wrapper.VariedGame-class.html#_vary_for_kwargs" class="summary-sig-name" onclick="show_private();">_vary_for_kwargs</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ips</span>,
+        <span class="summary-sig-arg">idx</span>,
+        <span class="summary-sig-arg">dependent_params</span>,
+        <span class="summary-sig-arg">sim_wrapper</span>,
+        <span class="summary-sig-arg">chosen_vals</span>,
+        <span class="summary-sig-arg">parallelize</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      A recursively defined function to iterate over all possible 
+      permutations of the variables defined in the list of independent 
+      variables that returns the simulation results of the cross product of
+      these variable variations.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame._vary_for_kwargs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">game_cls</span>,
+        <span class="sig-arg">dynamics_cls</span>,
+        <span class="sig-arg">game_kwargs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dynamics_kwargs</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize the wrapper with a subclass of Game and DynamicsSimulator, 
+  and optional keyword arguments that override the defaults</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>game_cls</code></strong> (<a href="dynamics_sim.games.game.Game-class.html" 
+          class="link">Game</a>.__class__) - the game to wrap</li>
+        <li><strong class="pname"><code>dynamics_cls</code></strong> (<a 
+          href="dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html"
+          class="link">DynamicsSimulator</a>.__class__) - the type of dynamics to use</li>
+        <li><strong class="pname"><code>game_kwargs</code></strong> (dict) - any keyword arguments that will be passed to the game class on 
+          initialization</li>
+        <li><strong class="pname"><code>dynamics_kwargs</code></strong> (dict) - any keyword arguments that will be passed to the dynamics class 
+          on initialization</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="vary_param"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">vary_param</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">kw</span>,
+        <span class="sig-arg">(low, high, num_steps)</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame.vary_param">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A helper function to vary one parameter of the game instance over a 
+  range of values, and graph the results</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>kw</code></strong> (str) - the keyword to vary</li>
+        <li><strong class="pname"><code>low</code></strong> (float or int) - the lower limit (inclusive) of the variation</li>
+        <li><strong class="pname"><code>high</code></strong> (float or int) - the upper limit (inclusive) of the variation</li>
+        <li><strong class="pname"><code>num_steps</code></strong> (int) - the number of steps to break the variation into. 1 indicates two 
+          total simulations, one at the lower limit and one at the upper 
+          limit. Must be larger than one</li>
+    </ul></dd>
+    <dt>Returns: <a href="dynamics_sim.results.NDimensionalData-class.html" 
+      class="link">NDimensionalData</a></dt>
+        <dd>the data for the parameter variation for all different values.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="vary_2params"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">vary_2params</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">kw1</span>,
+        <span class="sig-arg">(low1, high1, num_steps1)</span>,
+        <span class="sig-arg">kw2</span>,
+        <span class="sig-arg">(low2, high2, num_steps2)</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame.vary_2params">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A helper function to vary two parameters of the game instance over an 
+  independent range of values, and graph the results.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>kw1</code></strong> (str) - the keyword to vary</li>
+        <li><strong class="pname"><code>low1</code></strong> (float or int) - the lower limit (inclusive) of the first variation</li>
+        <li><strong class="pname"><code>high1</code></strong> (float or int) - the upper limit (inclusive) of the first variation</li>
+        <li><strong class="pname"><code>num_steps1</code></strong> (int) - the number of steps to break the first variation into. 1 
+          indicates two total simulations, one at the lower limit and one 
+          at the upper limit. Must be larger than one</li>
+        <li><strong class="pname"><code>kw2</code></strong> (str) - the lower keyword to vary</li>
+        <li><strong class="pname"><code>low2</code></strong> (float or int) - the lower limit (inclusive) of the second variation</li>
+        <li><strong class="pname"><code>high2</code></strong> (float or int) - the upper limit (inclusive) of the second variation</li>
+        <li><strong class="pname"><code>num_steps2</code></strong> (int) - the number of steps to break the second variation into. 1 
+          indicates two total simulations, one at the lower limit and one 
+          at the upper limit. Must be larger than one</li>
+    </ul></dd>
+    <dt>Returns: <a href="dynamics_sim.results.NDimensionalData-class.html" 
+      class="link">NDimensionalData</a></dt>
+        <dd>the data for the parameter variation for all different values.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="vary"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">vary</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">game_kwargs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dynamics_kwargs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">num_iterations</span>=<span class="sig-default">100</span>,
+        <span class="sig-arg">num_gens</span>=<span class="sig-default">300</span>,
+        <span class="sig-arg">graph</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">parallelize</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame.vary">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>We can vary the game kwargs, the dynamics kwargs, as well as any 
+  number of indirect inputs, if needed Each of these parameters must be an 
+  iterable of dictionaries, in the following form:</p>
+  <p>game_kwargs = [{INDEPENDENT},{DEPENDENT}, {INDIRECT}] INDEPENDENT: 
+  Each key must be the string of the param name, as seen in the constructor
+  Each value is an iterable of 3 values (lower_bound, upper_bound, 
+  num_steps)</p>
+  <p>DEPENDENT: Each key must be the string of the param name, as seen in 
+  the constructor, cannot have any of the keys in the keys of the 
+  INDEPENDENT dict Each value is a function that takes in kwargs for the 
+  namespace</p>
+  <p>INDIRECT: Each key must be the string of the param name, as seen in 
+  the constructor, cannot have any of the keys in the keys of the 
+  INDEPENDENT or DEPENDENT dicts</p>
+  <p>If the root item is actually a dictionary, and not a list/tuple, then 
+  there are assumed to be no dependent kwargs or INDIRECT</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_vary_for_kwargs"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_vary_for_kwargs</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ips</span>,
+        <span class="sig-arg">idx</span>,
+        <span class="sig-arg">dependent_params</span>,
+        <span class="sig-arg">sim_wrapper</span>,
+        <span class="sig-arg">chosen_vals</span>,
+        <span class="sig-arg">parallelize</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="dynamics_sim.wrapper-pysrc.html#VariedGame._vary_for_kwargs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A recursively defined function to iterate over all possible 
+  permutations of the variables defined in the list of independent 
+  variables that returns the simulation results of the cross product of 
+  these variable variations.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ips</code></strong> (list(<a 
+          href="dynamics_sim.wrapper.VerboseIndependentParameter-class.html"
+          class="link">VerboseIndependentParameter</a>)) - a list of all the VerboseIndependentParameters that will be 
+          varied</li>
+        <li><strong class="pname"><code>idx</code></strong> (int) - the index of the independent parameter about to be iterated upon</li>
+        <li><strong class="pname"><code>dependent_params</code></strong> (tuple({string: DependentParameter})) - the tuple of dictionaries representing the DependentParameters 
+          for the game_kwargs and the dynamics_kwargs, respectively.</li>
+        <li><strong class="pname"><code>sim_wrapper</code></strong> (<a href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html" 
+          class="link">GameDynamicsWrapper</a>) - the pre-initialized sim-wrapper on which we will call 
+          simulate_many</li>
+        <li><strong class="pname"><code>chosen_vals</code></strong> (tuple(int)) - a tuple of all the indices of the chosen values for each 
+          already-decided independent param</li>
+        <li><strong class="pname"><code>parallelize</code></strong> (bool) - whether or not to parallelize the subloops of this function. We 
+          set to true on the parent call and then false for all recursive 
+          calls.</li>
+        <li><strong class="pname"><code>kwargs</code></strong> - These are the rest of the keyword arguments that should be passed
+          directly to the simulate_many function call</li>
+    </ul></dd>
+    <dt>Returns: list(list(...))</dt>
+        <dd>a recursive list of lists representing the simulation results for
+          having assigned each independent parameter the value 
+          corresponding to the index at which the simulation results are 
+          present in the list of lists.
+          <p>i.e. Two independent parameters, the return type will be a 
+          list of lists of simulation results</p>
+          <p>The simulation result present at the address [4][17] 
+          represents the value of the simulation when the first independent
+          parameter was set to its value at index 4 (@see 
+          IndependentParameter.__getitem__), and the second independent 
+          parameter was set to its value at index 17.</p></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu May  1 19:08:03 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

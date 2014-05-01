@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class Hierarchy</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">&nbsp;</td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="class-tree.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<center><b>
+ [ <a href="module-tree.html">Module Hierarchy</a>
+ | <a href="class-tree.html">Class Hierarchy</a> ]
+</b></center><br />
+<h1 class="epydoc">Class Hierarchy</h1>
+<ul class="nomargin-top">
+    <li> <strong class="uidlink"><a href="dynamics_sim.plot.GraphOptions-class.html">dynamics_sim.plot.GraphOptions</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.util.Obj-class.html">dynamics_sim.util.Obj</a></strong>
+    </li>
+    <li> <strong class="uidlink">object</strong>:
+      <em class="summary">The most base type</em>
+    <ul>
+    <li> <strong class="uidlink">exceptions.BaseException</strong>:
+      <em class="summary">Common base class for all exceptions</em>
+    <ul>
+    <li> <strong class="uidlink">exceptions.Exception</strong>:
+      <em class="summary">Common base class for all non-exit exceptions.</em>
+    <ul>
+    <li> <strong class="uidlink">exceptions.StandardError</strong>:
+      <em class="summary">Base class for all standard Python exceptions that do not represent
+        interpreter exiting.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="exceptions.AssertionError-class.html">exceptions.AssertionError</a></strong>:
+      <em class="summary">Assertion failed.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.wrapper.DependentParameter-class.html">dynamics_sim.wrapper.DependentParameter</a></strong>:
+      <em class="summary">A dependent parameter that is defined as a function of the other 
+        parameters in the simulation.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.dynamics.dynamics.DynamicsSimulator-class.html">dynamics_sim.dynamics.dynamics.DynamicsSimulator</a></strong>:
+      <em class="summary">An abstract class that is used as the super class for all dynamics 
+        simulations, both stochastic and deterministic.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="dynamics_sim.dynamics.dynamics.StochasticDynamicsSimulator-class.html">dynamics_sim.dynamics.dynamics.StochasticDynamicsSimulator</a></strong>:
+      <em class="summary">An abstract subclass of the dynamics simulator class that 
+        implements a stochastic set of rules, with a function that maps 
+        payoffs to fitnesses, which are subsequently used to define the 
+        probability of reproduction.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="dynamics_sim.dynamics.moran.Moran-class.html">dynamics_sim.dynamics.moran.Moran</a></strong>:
+      <em class="summary">A stochastic dynamics simulator that performs the Moran process on 
+        all player types in the population.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.dynamics.wright_fisher.WrightFisher-class.html">dynamics_sim.dynamics.wright_fisher.WrightFisher</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.games.game.Game-class.html">dynamics_sim.games.game.Game</a></strong>:
+      <em class="summary">A class that is used to encapsulate the notion of a game theory 
+        game Each game is identified by a set number of players, each 
+        choosing from a pre-determined set of strategies, as well as the 
+        logic the defines the equilibria for the game.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="dynamics_sim.games.game.SymmetricNPlayerGame-class.html">dynamics_sim.games.game.SymmetricNPlayerGame</a></strong>:
+      <em class="summary">A convenience class that provides the logic for an N player game 
+        where each player chooses the from the same strategy set.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="dynamics_sim.games.hawk_dove.HawkDove-class.html">dynamics_sim.games.hawk_dove.HawkDove</a></strong>:
+      <em class="summary">A class used to to represent the 2 player hawk-dove game.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.games.hdb.HawkDoveBourgeois-class.html">dynamics_sim.games.hdb.HawkDoveBourgeois</a></strong>:
+      <em class="summary">A class used to to represent the 2 player hawk-dove-bourgeois game.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html">dynamics_sim.wrapper.GameDynamicsWrapper</a></strong>:
+      <em class="summary">A helper class that wraps a dynamics class and a game class and 
+        provides helper methods for simulation.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.wrapper.IndependentParameter-class.html">dynamics_sim.wrapper.IndependentParameter</a></strong>:
+      <em class="summary">A class that encapsulates the notion of a parameter that varies 
+        from simulation to simulation</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="dynamics_sim.wrapper.VerboseIndependentParameter-class.html">dynamics_sim.wrapper.VerboseIndependentParameter</a></strong>:
+      <em class="summary">An extension on the IndependentParameter class that makes room for 
+        three other properties</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.results.NDimensionalData-class.html">dynamics_sim.results.NDimensionalData</a></strong>:
+      <em class="summary">A helper class that encapsulates varied multi-dimensional results.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="dynamics_sim.results.ThreeDimensionalData-class.html">dynamics_sim.results.ThreeDimensionalData</a></strong>:
+      <em class="summary">A subclass that aids in the graphing of three dimensional data 
+        (varying two parameters)</em>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.results.TwoDimensionalData-class.html">dynamics_sim.results.TwoDimensionalData</a></strong>:
+      <em class="summary">A subclass that aids in the graphing of two dimension data (varying
+        one parameter across a range of values)</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.payoff_matrix.PayoffMatrix-class.html">dynamics_sim.payoff_matrix.PayoffMatrix</a></strong>:
+      <em class="summary">A class that encapsulates the notion of a set of payoff matrices 
+        for a game (one for each player), and provides convenience methods 
+        for getting the payoff for each player given a strategy set, as 
+        well as calculating the expected payoff given a distribution of 
+        players playing each strategy.</em>
+    </li>
+    <li> <strong class="uidlink">unittest.case.TestCase</strong>:
+      <em class="summary">A class whose instances are single test cases.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="dynamics_sim.test.TestCase-class.html">dynamics_sim.test.TestCase</a></strong>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="dynamics_sim.wrapper.VariedGame-class.html">dynamics_sim.wrapper.VariedGame</a></strong>:
+      <em class="summary">A class that wraps the <a 
+        href="dynamics_sim.wrapper.GameDynamicsWrapper-class.html" 
+        class="link">GameDynamicsWrapper</a> class and simplifies the 
+        process of varying multiple parameteres to the simulation at once, 
+        and then graphing the effect one or more parameters have on the 
+        resulting equilibrium distribution of repeated simulations.</em>
+    </li>
+    <li> <strong class="uidlink">type</strong>:
+      <em class="summary">type(object) -&gt; the object's type type(name, bases, dict) -&gt; 
+        a new type</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="abc.ABCMeta-class.html">abc.ABCMeta</a></strong>:
+      <em class="summary">Metaclass for defining Abstract Base Classes (ABCs).</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+</ul>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dynamics_sim-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu May  1 19:08:03 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
